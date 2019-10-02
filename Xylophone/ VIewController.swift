@@ -7,14 +7,14 @@
 //
 
 import UIKit
-//import AVFoundation
-import AudioToolbox
+import AVFoundation
+//import AudioToolbox
 //Audio tool box has low latency
 
 class ViewController: UIViewController{
    
     
-   // var player:AVAudioPlayer?;
+    var player:AVAudioPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +23,13 @@ class ViewController: UIViewController{
 
 
     @IBAction func notePressed(_ sender: UIButton) {
-        let key = String(sender.tag)
-        if let soundURL = Bundle.main.url(forResource:"note\(key)", withExtension: "wav"){
-            var mySound:SystemSoundID = 0;
-            AudioServicesCreateSystemSoundID(soundURL as CFURL, &mySound);
-            AudioServicesPlaySystemSound(mySound);
-            }
-        }
+//        let key = String(sender.tag)
+//        if let soundURL = Bundle.main.url(forResource:"note\(key)", withExtension: "wav"){
+//            var mySound:SystemSoundID = 0;
+//            AudioServicesCreateSystemSoundID(soundURL as CFURL, &mySound);
+//            AudioServicesPlaySystemSound(mySound);
+//            }
+//        }
         
 //         let url = Bundle.main.url(forResource: "note1", withExtension: "wav")!;
 //        do{
